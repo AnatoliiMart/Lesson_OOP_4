@@ -85,17 +85,24 @@ int main()
 	std::cout << "Enter size of array: ";
 	std::cin >> SIZE;
 
-	Array array(SIZE);
+	Array array1(SIZE);
+
+	
 
 	std::cout << "Array:" << std::endl;
-	array.ShowArray();
+	array1.ShowArray();
 
-	array.Sort();
+	Array array2(array1);
+	std::cout << "Copied array: " << std::endl;
+	array2.ShowArray();
+
+	array1.Sort();
 	std::cout << "Sorted array: " << std::endl;
-	array.ShowArray();
+	array1.ShowArray();
 
-	std::cout << "Min element of array: " << array.MinElem() << std::endl;
-	std::cout << "Max element of array: " << array.MaxElem() << std::endl;
+	std::cout << "Min element of array: " << array1.MinElem() << std::endl;
+	std::cout << "Max element of array: " << array1.MaxElem() << std::endl;
 
+	
 	return 0;
 }
